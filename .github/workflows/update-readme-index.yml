@@ -1,0 +1,30 @@
+name: Update README Index
+
+on:
+  push:
+    paths:
+      - "solutions/go/**"
+      - "scripts/update-readme-index.sh"
+      - "README.md"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-readme-index:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Update README index
+        run: bash ./scripts/update-readme-index.sh
+
+      - name: Commit changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore(readme): auto-update problem index [skip ci]"
+          file_pattern: README.md

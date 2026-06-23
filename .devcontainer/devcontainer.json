@@ -1,0 +1,37 @@
+{
+  "name": "Go LeetCode Dev",
+  "image": "mcr.microsoft.com/devcontainers/go:1-1.23-bookworm",
+  "features": {
+    "ghcr.io/devcontainers/features/git:1": {},
+    "ghcr.io/devcontainers/features/github-cli:1": {},
+    "ghcr.io/devcontainers/features/node:1": {}
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "golang.go",
+        "github.copilot",
+        "github.copilot-chat",
+        "eamodio.gitlens",
+        "usernamehw.errorlens",
+        "streetsidesoftware.code-spell-checker",
+        "redhat.vscode-yaml",
+        "editorconfig.editorconfig",
+        "ms-vscode.makefile-tools",
+        "ms-azuretools.vscode-docker",
+        "esbenp.prettier-vscode",
+        "foxundermoon.shell-format"
+      ],
+      "settings": {
+        "go.useLanguageServer": true,
+        "go.lintTool": "golangci-lint",
+        "go.lintOnSave": "package",
+        "editor.formatOnSave": true,
+        "files.trimTrailingWhitespace": true,
+        "files.insertFinalNewline": true,
+        "cSpell.enabled": false
+      }
+    }
+  },
+  "postCreateCommand": "bash -c 'sudo apt-get update || true && sudo apt-get install -y pre-commit && go install github.com/golangci/golangci-lint/cmd/golangci-lint@latest && git config --global --add safe.directory /workspaces/my-leetcode-solutions && pre-commit install --hook-type pre-commit --hook-type commit-msg'"
+}
