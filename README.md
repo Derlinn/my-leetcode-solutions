@@ -25,13 +25,11 @@ Naming convention:
 ## Progress
 
 <!-- index:start -->
+Solved: 1
 
-Solved: 0
-
-| ID  | Title            | Link |
-| --- | ---------------- | ---- |
-| -   | No solutions yet | -    |
-
+| ID | Title | Link |
+| --- | --- | --- |
+| 3289 | Two Sneaky Numbers Of Digitville | [solution.go](solutions/go/3289-two-sneaky-numbers-of-digitville/solution.go) |
 <!-- index:end -->
 
 ## Quick setup
