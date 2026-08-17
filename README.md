@@ -25,11 +25,12 @@ Naming convention:
 ## Progress
 
 <!-- index:start -->
-Solved: 3
+Solved: 4
 
 | ID | Title | Link |
 | --- | --- | --- |
 | 1 | Two Sum | [solution.go](solutions/go/1-two-sum/solution.go) |
+| 13 | Roman To Integer | [solution.go](solutions/go/13-roman-to-integer/solution.go) |
 | 14 | Longest Common Prefix | [solution.go](solutions/go/14-longest-common-prefix/solution.go) |
 | 3289 | Two Sneaky Numbers Of Digitville | [solution.go](solutions/go/3289-two-sneaky-numbers-of-digitville/solution.go) |
 <!-- index:end -->
